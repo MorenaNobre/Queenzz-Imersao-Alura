@@ -4,6 +4,7 @@ import Widget from '../src/components/Widget'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 import QuizBackground from '../src/components/QuizBackground'
+import QuizLogo from "../src/components/QuizLogo";
 
 // const BackgroundImage = styled.div`
 //   background-image: url(${db.bg});
@@ -13,9 +14,10 @@ import QuizBackground from '../src/components/QuizBackground'
 // `;
 
 export const QuizContainer = styled.div`
+  position: relative;
   width: 100%;
   max-width: 350px;
-  padding-top: 45px;
+  padding-top: 82px;
   margin: auto 8%;
   @media screen and (max-width: 500px) {
     margin: auto;
@@ -32,6 +34,7 @@ export default function Home() {
   return (
     <QuizBackground backgroundImage={db.bg}>
       <QuizContainer>
+        <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>The Royal Queens</h1>
