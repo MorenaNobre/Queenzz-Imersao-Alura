@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   border-radius: 26px;
   background: ${({ theme }) => theme.colors.wrong};
-  box-shadow: inset 25px -25px 49px #fd716e, inset -25px 25px 49px #fab2b1;
+  box-shadow: inset 25px -25px 49px #fd716e, inset -25px 25px 49px #fab2b1, 1px -1px 10px #fd716e, -1px 1px 10px #fab2b1;
   /* box-shadow: 5px -5px 10px #fd716e, -5px 5px 10px #fab2b1; */
   h1,
   h2,
@@ -61,6 +61,11 @@ Widget.Background = styled.div`
     rgba(255, 255, 255, 0.1)
   );
   backdrop-filter: blur(0.9rem);
+  
+  @media screen and (max-width: 500px) {
+    margin: auto;
+    padding: 15px;
+  }
 `;
 
 export default Widget;

@@ -1,7 +1,9 @@
-import styled from "styled-components";
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable import/no-extraneous-dependencies */
+import styled from 'styled-components';
 
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 function Logo({ className }) {
   return (
@@ -9,7 +11,7 @@ function Logo({ className }) {
       className={className}
       viewBox="0 0 135 67"
       src="/img/queenzz-final.png"
-    ></img>
+    />
   );
 }
 
