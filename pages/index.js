@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Head from "next/head";
 import db from "../db.json";
 import Widget from "../src/components/Widget";
 import Footer from "../src/components/Footer";
