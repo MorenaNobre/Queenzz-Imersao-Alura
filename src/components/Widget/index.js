@@ -1,24 +1,12 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
-  border: 1px solid ${({ theme }) => theme.colors.primary};
-  /* background-color: #1c1814; */
-  /* background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.8),
-    rgba(255, 255, 255, 0.1)
-  ); */
-  background: linear-gradient(
-    to right bottom,
-    rgba(0, 151, 164, 0.8),
-    rgba(255, 255, 255, 0.1)
-  );
-  backdrop-filter: blur(0.9rem);
-  border-radius: 4px;
-  overflow: hidden;
-
+  border-radius: 26px;
+  background: ${({ theme }) => theme.colors.wrong};
+  box-shadow: inset 25px -25px 49px #fd716e, inset -25px 25px 49px #fab2b1;
+  /* box-shadow: 5px -5px 10px #fd716e, -5px 5px 10px #fab2b1; */
   h1,
   h2,
   h3 {
@@ -34,17 +22,18 @@ const Widget = styled.div`
   }
 `;
 
-Widget.Header = styled.header`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 18px 32px;
-  background-color: ${({ theme }) => theme.colors.primary};
+// Widget.Header = styled.header`
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: center;
+//   padding: 18px 32px;
+//   background: ${({ theme }) => theme.colors.wrong};
+//   box-shadow: inset 25px -25px 49px #fd716e, inset -25px 25px 49px #fab2b1;
 
-  * {
-    margin: 0;
-  }
-`;
+//   * {
+//     margin: 0;
+//   }
+// `;
 
 Widget.Content = styled.div`
   padding: 24px 32px 32px 32px;
@@ -60,4 +49,18 @@ Widget.Content = styled.div`
   }
 `;
 
-export default Widget
+Widget.Background = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 32%;
+  bottom: 0;
+  background-color: #1c1814;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(0.9rem);
+`;
+
+export default Widget;

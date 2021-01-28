@@ -1,11 +1,15 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 function Logo({ className }) {
   return (
-    <img src="/img/queenzz-final.png"></img>
+    <img
+      className={className}
+      viewBox="0 0 135 67"
+      src="/img/queenzz-final.png"
+    ></img>
   );
 }
 
@@ -15,10 +19,11 @@ Logo.propTypes = {
 
 const QuizLogo = styled(Logo)`
   position: absolute;
-    z-index: 10;
-    width: 250px;
-    margin-left: 62px;
-    top: 18px;
+  z-index: 10;
+  height: 98px;
+  margin-left: 52px;
+  top: 40px;
+
   @media screen and (max-width: 500px) {
     margin: 0;
   }
